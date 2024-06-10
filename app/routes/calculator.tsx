@@ -139,6 +139,14 @@ export default function Calculator() {
           >
             /
           </Button>
+          <Button
+            onClick={() => {
+              handleInput(".");
+              inputRef.current.focus();
+            }}
+          >
+            .
+          </Button>
         </div>
         <div className="flex gap-2">
           <Button
@@ -253,16 +261,18 @@ export default function Calculator() {
           </Button>
           <Button
             onClick={() => {
-              handleInput(".");
+              handleInput("00");
               inputRef.current.focus();
             }}
           >
-            .
+            00
           </Button>
           <Button
             onClick={() => {
               handleBack();
-              inputRef.current.focus();
+              if (inputRef.current) {
+                inputRef.current.focus();
+              }
             }}
           >
             {"C"}

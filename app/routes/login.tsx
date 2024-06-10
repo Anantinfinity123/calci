@@ -42,7 +42,7 @@ export default function Login() {
       await googleLogin();
       navigate("/calculator");
     } catch (err) {
-      setError("Google login failed.");
+      setError("Google login failed! Please check your credential.");
     }
   };
   return (
