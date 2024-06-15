@@ -1,8 +1,9 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyBoNFW0KHoVcYae2EjebJule088gMCV3HM",
-  authDomain: "remix-calculator.firebaseapp.com",
-  projectId: "remix-calculator",
-  storageBucket: "remix-calculator.appspot.com",
-  messagingSenderId: "934924625668",
-  appId: "1:934924625668:web:6ce66ef59c8dcf767b9251",
+  apiKey: "AIzaSyDwD6UzkzwVx5kU5gEmXX2xksXcrZ9Z70k",
+  authDomain: "calculator-aee11.firebaseapp.com",
+  projectId: "calculator-aee11",
+  storageBucket: "calculator-aee11.appspot.com",
+  messagingSenderId: "253679826879",
+  appId: "1:253679826879:web:9d44edf06e789fca49130a",
+  measurementId: "G-G2006ZHDTS"
 };

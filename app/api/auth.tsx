@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import {
   GoogleAuthProvider,
   getAuth,
@@ -11,6 +12,10 @@ import { firebaseConfig } from "../config/firebase";
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
+if (typeof window !== "undefined") {
+  // Only initialize Firebase Analytics when window is defined (i.e., in the browser)
+  const analytics = getAnalytics(app);
+}
 
 export async function googleLogin() {
   try {
