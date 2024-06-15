@@ -43,7 +43,7 @@ export default function Login() {
     try {
       await googleLogin();
       navigate("/calculator");
-      toast.success('You have sucessfully logged in!');
+      toast.success('You have sucessfully logged in with google credentials!');
     } catch (err) {
       setError("Google login failed! Please check your credential.");
     }
