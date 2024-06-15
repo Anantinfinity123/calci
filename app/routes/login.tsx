@@ -3,6 +3,7 @@ import { useNavigate } from "@remix-run/react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { googleLogin, loginWithEmail } from "../api/auth";
 import { useUser } from "~/context/UserContext";
+import { toast } from 'react-hot-toast';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,7 @@ export default function Login() {
     try {
       await loginWithEmail({ email, password });
       navigate("/calculator");
+      toast.success('You have sucessfully logged in!');
     } catch (err) {
       setError("Failed to login. Please check your credentials and Try again."); // Set error message on failure
     }
@@ -41,6 +43,7 @@ export default function Login() {
     try {
       await googleLogin();
       navigate("/calculator");
+      toast.success('You have sucessfully logged in!');
     } catch (err) {
       setError("Google login failed! Please check your credential.");
     }

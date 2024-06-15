@@ -8,6 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "./tailwind.css?url";
 import { UserProvider } from "./context/UserContext";
+import { Toaster } from 'react-hot-toast';
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -37,6 +38,10 @@ export default function App() {
     <UserProvider>
       <div>
         <Outlet />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
         <LiveReload />
       </div>
     </UserProvider>

@@ -22,7 +22,9 @@
     "isbot": "^4.1.0",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.9.1",
