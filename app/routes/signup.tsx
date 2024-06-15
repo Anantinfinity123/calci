@@ -3,6 +3,7 @@ import { useNavigate } from "@remix-run/react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { signUpWithEmail } from "../api/auth";
 import { useUser } from "~/context/UserContext";
+import { toast } from 'react-hot-toast';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ export default function Login() {
     if (password === reEnterPassword) {
       await signUpWithEmail({ email, password });
       navigate("/calculator");
+      toast.success('You have sucessfully signed up!');
     } else {
       setError("Password is incorrect");
     }
