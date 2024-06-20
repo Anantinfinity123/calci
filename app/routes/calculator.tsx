@@ -4,6 +4,7 @@ import { calculate } from "../api/provider";
 import { useUser } from "../context/UserContext";
 import { logout } from "../api/auth";
 import { useNavigate } from "@remix-run/react";
+import { toast } from 'react-hot-toast';
 
 export default function Calculator() {
   const navigate = useNavigate();
@@ -82,6 +83,7 @@ export default function Calculator() {
               logout().then(() => {
                 setUser(null);
                 navigate("../login");
+                toast.success('You have sucessfully logged out!');
               })
             }
             className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700"
