@@ -72,7 +72,7 @@ export default function Calculator() {
               : "Not logged in"}
           </span>
           <span>
-            <h1 className="bg-gray-500 p-4 text-center">
+            <h1 className="bg-gray-500 p-4 text-center rounded">
               {user
               ? `Hii, ${user.name !== "" ? user.name : user.email}. You can do a normal calculation. Let's play with number.`
               : "Not Logged in! Please logged in first."}
