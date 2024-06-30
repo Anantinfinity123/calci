@@ -26,7 +26,8 @@ export default function Calculator() {
     try {
       const result = await calculate(input);
       setInput(result.result);
-    } catch (error) {
+    }
+     catch (error) {
       setInput("Error");
     }
   };
